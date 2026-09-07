@@ -262,66 +262,62 @@
     }
 
     .hero-top-deco{
-      margin-top: 50px;
-      margin-bottom: 6px;
+      margin-top: 42px;
+      margin-bottom: 8px;
       opacity:0;animation:fadeUp .8s .1s forwards;
       position: relative;
       z-index: 5;
     }
-    .hero-top-deco img { width: 110px !important; }
+    .hero-top-deco img { width: 120px !important; }
     .hero-kicker{
       font-family:'Playfair Display',serif;
-      font-size:10px;letter-spacing:4px;text-transform:uppercase;
-      color:var(--gold);margin-bottom:3px;
+      font-size:12px;letter-spacing:4px;text-transform:uppercase;
+      color:var(--gold);margin-bottom:6px;
       opacity:0;animation:fadeUp .8s .2s forwards;
       position: relative; z-index: 5;
     }
     .hero-title-sm{
-      font-family:'Playfair Display',serif;font-size:12px;
+      font-family:'Playfair Display',serif;font-size:15px;
       letter-spacing:3px;color:var(--muted);text-transform:uppercase;
-      margin-bottom:3px;
+      margin-bottom:6px;
       opacity:0;animation:fadeUp .8s .3s forwards;
       position: relative; z-index: 5;
     }
     .hero-name{
       font-family:'Dancing Script',cursive;
-      font-size:clamp(40px,6vh,68px);
-      color:var(--dark);line-height:1;
-      margin:4px auto;
+      font-size:clamp(52px,8vh,84px);
+      color:var(--dark);line-height:1.1;
+      margin:8px auto;
       opacity:0;animation:fadeUp .9s .6s forwards;
       position: relative; z-index: 5;
     }
     .hero-sub{
       font-family:'Playfair Display',serif;
-      font-size:12px;
+      font-size:13px;
       color:var(--muted);letter-spacing:2px;
-      margin-top:3px;
+      margin-top:4px;
       opacity:0;animation:fadeUp .9s .5s forwards;
       position: relative; z-index: 5;
     }
     .gold-dot{
-      width:5px;height:5px;background:var(--gold);
-      transform:rotate(45deg);margin:5px auto;
+      width:6px;height:6px;background:var(--gold);
+      transform:rotate(45deg);margin:8px auto;
       opacity:0;animation:fadeUp .9s .6s forwards;
       position: relative; z-index: 5;
     }
     .hero-time{
-      font-size:14px;color:var(--red2);font-weight:600;margin-bottom:3px;
+      font-size:15px;color:var(--red2);font-weight:600;margin-bottom:4px;
       opacity:0;animation:fadeUp .9s .7s forwards;
       position: relative; z-index: 5;
     }
     .hero-location{
-      font-size:12px;color:var(--muted);line-height:1.4;
+      font-size:13px;color:var(--muted);line-height:1.5;
       opacity:0;animation:fadeUp .9s .8s forwards;
       position: relative; z-index: 5;
     }
     .hero-illustration{
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
       width: 100%;
-      max-width: 480px;
+      margin-top: auto;
       opacity:0;animation:fadeUp 1s .9s forwards;
       display:flex;align-items:flex-end;justify-content:center;
       z-index: 1;
@@ -329,18 +325,17 @@
     }
     .avatar-container {
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
       position: relative;
       width: 100%;
     }
     .student-avatar {
-      max-width: 68%;
+      max-width: 52%;
       width: 100%;
       height: auto;
-      max-height: 55vh;
+      max-height: 42vh;
       object-fit: contain;
-      object-position: bottom;
       filter: drop-shadow(0 15px 30px rgba(0,0,0,0.4));
       z-index: 3;
       display: block;
@@ -348,10 +343,12 @@
     }
     .floral-bottom {
       position: absolute;
-      bottom: -10px;
-      width: clamp(260px, 92vw, 460px);
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: clamp(220px, 85vw, 400px);
       z-index: 2;
-      opacity: 0.95;
+      opacity: 0.9;
       mix-blend-mode: multiply;
       pointer-events: none;
     }
@@ -359,7 +356,7 @@
       display: flex;
       justify-content: center;
       gap: 3px;
-      margin-top: 45px;
+      margin-top: 0;
       position: absolute;
       top: 0;
       left: 0;
@@ -390,31 +387,6 @@
       100% { transform: rotate(5deg); }
     }
 
-    .avatar-container {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      margin-top: auto;
-      position: relative;
-    }
-    .floral-bottom {
-      position: absolute;
-      bottom: -15px;
-      width: clamp(280px, 95vw, 500px);
-      z-index: 1;
-      opacity: 0.95;
-      mix-blend-mode: multiply;
-      pointer-events: none;
-    }
-    .cap-deco {
-      position: absolute;
-      top: 5px;
-      left: calc(50% - clamp(140px, 40vw, 200px));
-      font-size: clamp(35px, 8vw, 45px);
-      z-index: 20;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
-      transform: rotate(-15deg);
-    }
 
     /* ── MINI CALENDAR ── */
     .cal-mini {
@@ -764,7 +736,6 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="cap-deco">🎓</div>
     <div class="bunting-banner">
       <div class="flag">H</div>
       <div class="flag">A</div>
@@ -790,7 +761,7 @@
     <p class="hero-kicker">Thư Mời Tham Dự</p>
     <p class="hero-title-sm">Lễ Tốt Nghiệp Của</p>
     <h1 class="hero-name">Lê Tiến Dũng</h1>
-    <p class="hero-sub">HÂN HẠNH MỜI<span id="guest-name" style="color: var(--gold); font-weight: 600; font-size: 15px;"></span></p>
+    <p class="hero-sub">HÂN HẠNH MỜI<br><span id="guest-name" style="display:block;color: var(--gold); font-weight: 700; font-size: 18px; margin-top: 6px; min-height: 26px;"></span></p>
     
     <div class="gold-dot"></div>
 
@@ -808,7 +779,7 @@
   <!-- COUNTDOWN -->
   <section id="countdown-section">
     <p class="cd-label">◆ Đếm Ngược ◆</p>
-    <h2 class="cd-title">Còn Bao Lâu Nữa Thôi</h2>
+    <h2 class="cd-title">Còn Bao Lâu Nữa</h2>
 
     <div class="cal-mini reveal">
       <div class="cal-mini-top">
@@ -849,8 +820,6 @@
     <div class="map-btn-row">
       <a href="https://maps.google.com/?q=Dai+hoc+Bach+Khoa+Ha+Noi,+1+Dai+Co+Viet,+Ha+Noi"
          target="_blank" rel="noopener noreferrer" class="btn btn-primary">🗺 Google Maps</a>
-      <a href="https://maps.apple.com/?address=1+Dai+Co+Viet,+Hai+Ba+Trung,+Ha+Noi"
-         target="_blank" rel="noopener noreferrer" class="btn btn-outline">🍎 Apple Maps</a>
     </div>
   </section>
 
