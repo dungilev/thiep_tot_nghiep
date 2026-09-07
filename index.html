@@ -239,7 +239,7 @@
       display:flex;flex-direction:column;
       align-items:center;justify-content:flex-start;
       text-align:center;
-      padding: clamp(10px,2vh,60px) max(24px, calc(50% - 216px)) 10px;
+      padding: 0 max(24px, calc(50% - 216px)) 0;
       position:relative;overflow:hidden;
       background: url('media__1788779785592.png') center/cover no-repeat;
       z-index: 1;
@@ -262,57 +262,158 @@
     }
 
     .hero-top-deco{
-      margin-bottom:clamp(10px, 3vh, 28px);
+      margin-top: 50px;
+      margin-bottom: 6px;
       opacity:0;animation:fadeUp .8s .1s forwards;
+      position: relative;
+      z-index: 5;
     }
+    .hero-top-deco img { width: 110px !important; }
     .hero-kicker{
       font-family:'Playfair Display',serif;
-      font-size:11px;letter-spacing:4px;text-transform:uppercase;
-      color:var(--gold);margin-bottom:8px;
+      font-size:10px;letter-spacing:4px;text-transform:uppercase;
+      color:var(--gold);margin-bottom:3px;
       opacity:0;animation:fadeUp .8s .2s forwards;
+      position: relative; z-index: 5;
     }
     .hero-title-sm{
-      font-family:'Playfair Display',serif;font-size:14px;
+      font-family:'Playfair Display',serif;font-size:12px;
       letter-spacing:3px;color:var(--muted);text-transform:uppercase;
-      margin-bottom:8px;
+      margin-bottom:3px;
       opacity:0;animation:fadeUp .8s .3s forwards;
+      position: relative; z-index: 5;
     }
     .hero-name{
       font-family:'Dancing Script',cursive;
-      font-size:clamp(48px,8vh,80px);
-      color:var(--dark);line-height:1.1;
-      opacity:0;animation:fadeUp .9s .4s forwards;
+      font-size:clamp(40px,6vh,68px);
+      color:var(--dark);line-height:1;
+      margin:4px auto;
+      opacity:0;animation:fadeUp .9s .6s forwards;
+      position: relative; z-index: 5;
     }
     .hero-sub{
       font-family:'Playfair Display',serif;
-      font-size:13px;
+      font-size:12px;
       color:var(--muted);letter-spacing:2px;
-      margin-top:clamp(4px, 2vh, 12px);
+      margin-top:3px;
       opacity:0;animation:fadeUp .9s .5s forwards;
+      position: relative; z-index: 5;
     }
     .gold-dot{
-      width:6px;height:6px;background:var(--gold);
-      transform:rotate(45deg);margin:clamp(12px, 3vh, 24px) auto;
+      width:5px;height:5px;background:var(--gold);
+      transform:rotate(45deg);margin:5px auto;
       opacity:0;animation:fadeUp .9s .6s forwards;
+      position: relative; z-index: 5;
     }
     .hero-time{
-      font-size:15px;color:var(--red2);font-weight:600;margin-bottom:6px;
+      font-size:14px;color:var(--red2);font-weight:600;margin-bottom:3px;
       opacity:0;animation:fadeUp .9s .7s forwards;
+      position: relative; z-index: 5;
     }
     .hero-location{
-      font-size:14px;color:var(--muted);line-height:1.6;
+      font-size:12px;color:var(--muted);line-height:1.4;
       opacity:0;animation:fadeUp .9s .8s forwards;
+      position: relative; z-index: 5;
     }
     .hero-illustration{
-      margin-top:auto;padding-top:clamp(10px, 3vh, 40px);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 480px;
       opacity:0;animation:fadeUp 1s .9s forwards;
-      display:flex;flex-direction:column;align-items:center;
+      display:flex;align-items:flex-end;justify-content:center;
+      z-index: 1;
+      pointer-events: none;
     }
-    .illust-circle{
-      width:140px;height:140px;
-      border-radius:50%;border:1px dashed var(--gold);
-      display:flex;align-items:center;justify-content:center;
-      background:rgba(201,168,76,0.05);
+    .avatar-container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+    }
+    .student-avatar {
+      max-width: 68%;
+      width: 100%;
+      height: auto;
+      max-height: 55vh;
+      object-fit: contain;
+      object-position: bottom;
+      filter: drop-shadow(0 15px 30px rgba(0,0,0,0.4));
+      z-index: 3;
+      display: block;
+      position: relative;
+    }
+    .floral-bottom {
+      position: absolute;
+      bottom: -10px;
+      width: clamp(260px, 92vw, 460px);
+      z-index: 2;
+      opacity: 0.95;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+    .bunting-banner {
+      display: flex;
+      justify-content: center;
+      gap: 3px;
+      margin-top: 45px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    }
+    .flag {
+      width: clamp(14px, 4.5vw, 22px);
+      height: clamp(20px, 6.5vw, 32px);
+      background: var(--gold);
+      color: #fff;
+      font-size: clamp(10px, 3vw, 14px);
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 4px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+      animation: swing 3s ease-in-out infinite alternate;
+      transform-origin: top center;
+    }
+    .flag:nth-child(even) { animation-delay: -1.5s; background: #b5923b; }
+    .flag.gap { background: transparent; width: clamp(5px, 2vw, 10px); box-shadow: none; clip-path: none; animation: none; }
+    
+    @keyframes swing {
+      0% { transform: rotate(-5deg); }
+      100% { transform: rotate(5deg); }
+    }
+
+    .avatar-container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin-top: auto;
+      position: relative;
+    }
+    .floral-bottom {
+      position: absolute;
+      bottom: -15px;
+      width: clamp(280px, 95vw, 500px);
+      z-index: 1;
+      opacity: 0.95;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+    .cap-deco {
+      position: absolute;
+      top: 5px;
+      left: calc(50% - clamp(140px, 40vw, 200px));
+      font-size: clamp(35px, 8vw, 45px);
+      z-index: 20;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+      transform: rotate(-15deg);
     }
 
     /* ── MINI CALENDAR ── */
@@ -663,6 +764,25 @@
 
   <!-- HERO -->
   <section id="hero">
+    <div class="cap-deco">🎓</div>
+    <div class="bunting-banner">
+      <div class="flag">H</div>
+      <div class="flag">A</div>
+      <div class="flag">P</div>
+      <div class="flag">P</div>
+      <div class="flag">Y</div>
+      <div class="flag gap"></div>
+      <div class="flag">G</div>
+      <div class="flag">R</div>
+      <div class="flag">A</div>
+      <div class="flag">D</div>
+      <div class="flag">U</div>
+      <div class="flag">A</div>
+      <div class="flag">T</div>
+      <div class="flag">I</div>
+      <div class="flag">O</div>
+      <div class="flag">N</div>
+    </div>
     <div class="hero-top-deco">
        <img src="logo-hust-70.png" alt="70 Năm Bách Khoa" style="width: 160px; height: auto; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.08));" />
     </div>
@@ -678,10 +798,10 @@
     <p class="hero-location">Đại học Bách Khoa Hà Nội<br/>Hội trường C2, 1 Đại Cồ Việt</p>
 
     <div class="hero-illustration">
-       <div class="illust-circle">
-          <span style="font-size: 60px;">🎓</span>
+       <div class="avatar-container">
+          <img src="floral_nobg.png" alt="Floral Border" class="floral-bottom" />
+          <img src="student_nobg.png" alt="Cử nhân" class="student-avatar" />
        </div>
-       <p style="font-size:12px; color:var(--muted); margin-top:8px;">(Thay ảnh cử nhân của bạn vào đây)</p>
     </div>
   </section>
 
@@ -776,6 +896,12 @@
 function openEnvelope(){
   const env = document.getElementById('envelope');
   env.classList.add('open');
+  
+  if(!playing) {
+    audio.currentTime = 103;
+    toggleMusic();
+  }
+
   setTimeout(()=>{
     const overlay = document.getElementById('envelope-overlay');
     overlay.classList.add('hidden');
